@@ -127,7 +127,7 @@ module CarrierWaveDirect
     end
 
     def direct_fog_url
-      self.asset_host
+      asset_host || "https://#{aws_bucket}.s3.amazonaws.com/"
     end
     #
     def direct_fog_hash(policy_options = {})

@@ -13,7 +13,7 @@ describe CarrierWaveDirect::Policies::AwsBase64Sha1 do
       expect(subject.direct_fog_hash.keys).to eq([:key, :AWSAccessKeyId, :acl, :policy, :signature, :uri])
       expect(subject.direct_fog_hash[:acl]).to eq 'public-read'
       expect(subject.direct_fog_hash[:key]).to match /\$\{filename\}/
-      expect(subject.direct_fog_hash[:uri]).to eq "https://s3.amazonaws.com/AWS_FOG_DIRECTORY/"
+      expect(subject.direct_fog_hash[:uri]).to eq "https://AWS_FOG_DIRECTORY.s3.amazonaws.com/"
     end
   end
 
@@ -226,4 +226,3 @@ describe CarrierWaveDirect::Policies::AwsBase64Sha1 do
     end
   end
 end
-
