@@ -12,14 +12,14 @@ module CarrierWaveDirect
     FILENAME_WILDCARD = "${filename}"
 
     included do
-      storage :fog
+      storage :aws
 
       attr_accessor :success_action_redirect
       attr_accessor :success_action_status
 
-      fog_credentials.keys.each do |key|
+      aws_credentials.keys.each do |key|
         define_method(key) do
-          fog_credentials[key]
+          aws_credentials[key]
         end
       end
     end
@@ -32,7 +32,7 @@ module CarrierWaveDirect
     end
 
     def acl
-      fog_public ? 'public-read' : 'private'
+      aws_acl ? aws_acl : 'private'
     end
 
     def policy(options = {}, &block)
@@ -127,9 +127,9 @@ module CarrierWaveDirect
     end
 
     def direct_fog_url
-      CarrierWave::Storage::Fog::File.new(self, CarrierWave::Storage::Fog.new(self), nil).public_url
+      self.asset_host
     end
-
+    #
     def direct_fog_hash(policy_options = {})
       signing_policy.direct_fog_hash(policy_options)
     end

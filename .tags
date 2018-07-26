@@ -1,0 +1,191 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ActionViewExtensions	lib/carrierwave_direct/action_view_extensions/form_helper.rb	/^  module ActionViewExtensions$/;"	m	class:CarrierWaveDirect
+ActiveModel	lib/carrierwave_direct/validations/active_model.rb	/^    module ActiveModel$/;"	m	class:CarrierWaveDirect.Validations
+ActiveRecord	lib/carrierwave_direct/orm/activerecord.rb	/^  module ActiveRecord$/;"	m	class:CarrierWaveDirect
+Aws4HmacSha256	lib/carrierwave_direct/policies/aws4_hmac_sha256.rb	/^    class Aws4HmacSha256 < Base$/;"	c	class:CarrierWaveDirect.Policies
+AwsBase64Sha1	lib/carrierwave_direct/policies/aws_base64_sha1.rb	/^    class AwsBase64Sha1 < Base$/;"	c	class:CarrierWaveDirect.Policies
+Base	lib/carrierwave_direct/policies/base.rb	/^    class Base$/;"	c	class:CarrierWaveDirect.Policies
+CapybaraHelpers	lib/carrierwave_direct/test/capybara_helpers.rb	/^    module CapybaraHelpers$/;"	m	class:CarrierWaveDirect.Test
+CarrierWaveDirect	lib/carrierwave_direct.rb	/^  module CarrierWaveDirect$/;"	m
+CarrierWaveDirect	lib/carrierwave_direct.rb	/^module CarrierWaveDirect$/;"	m
+CarrierWaveDirect	lib/carrierwave_direct/action_view_extensions/form_helper.rb	/^module CarrierWaveDirect$/;"	m
+CarrierWaveDirect	lib/carrierwave_direct/form_builder.rb	/^module CarrierWaveDirect$/;"	m
+CarrierWaveDirect	lib/carrierwave_direct/mount.rb	/^module CarrierWaveDirect$/;"	m
+CarrierWaveDirect	lib/carrierwave_direct/orm/activerecord.rb	/^module CarrierWaveDirect$/;"	m
+CarrierWaveDirect	lib/carrierwave_direct/policies/aws4_hmac_sha256.rb	/^module CarrierWaveDirect$/;"	m
+CarrierWaveDirect	lib/carrierwave_direct/policies/aws_base64_sha1.rb	/^module CarrierWaveDirect$/;"	m
+CarrierWaveDirect	lib/carrierwave_direct/policies/base.rb	/^module CarrierWaveDirect$/;"	m
+CarrierWaveDirect	lib/carrierwave_direct/test/capybara_helpers.rb	/^module CarrierWaveDirect$/;"	m
+CarrierWaveDirect	lib/carrierwave_direct/test/helpers.rb	/^module CarrierWaveDirect$/;"	m
+CarrierWaveDirect	lib/carrierwave_direct/uploader.rb	/^module CarrierWaveDirect$/;"	m
+CarrierWaveDirect	lib/carrierwave_direct/uploader/configuration.rb	/^module CarrierWaveDirect$/;"	m
+CarrierWaveDirect	lib/carrierwave_direct/uploader/content_type.rb	/^module CarrierWaveDirect$/;"	m
+CarrierWaveDirect	lib/carrierwave_direct/validations/active_model.rb	/^module CarrierWaveDirect$/;"	m
+CarrierWaveDirect	spec/form_builder_spec.rb	/^class CarrierWaveDirect::FormBuilder$/;"	c
+CarrierwaveDirect	lib/carrierwave_direct/version.rb	/^module CarrierwaveDirect$/;"	m
+ClassMethods	lib/carrierwave_direct/uploader/configuration.rb	/^      module ClassMethods$/;"	m	class:CarrierWaveDirect.Uploader.Configuration
+ClassMethods	spec/support/model_helpers.rb	/^  module ClassMethods$/;"	m	class:ModelHelpers
+Configuration	lib/carrierwave_direct/uploader/configuration.rb	/^    module Configuration$/;"	m	class:CarrierWaveDirect.Uploader
+ContentType	lib/carrierwave_direct/uploader/content_type.rb	/^    module ContentType$/;"	m	class:CarrierWaveDirect.Uploader
+Dance	spec/orm/activerecord_spec.rb	/^  class Dance < ActiveRecord::Base$/;"	c
+DirectUploader	spec/support/direct_uploader.rb	/^class DirectUploader < CarrierWave::Uploader::Base$/;"	c
+ExampleSpec	spec/test/capybara_helpers_spec.rb	/^  class ExampleSpec$/;"	c
+FilenameFormatValidator	lib/carrierwave_direct/validations/active_model.rb	/^      class FilenameFormatValidator < ::ActiveModel::EachValidator$/;"	c	class:CarrierWaveDirect.Validations.ActiveModel
+FormBuilder	lib/carrierwave_direct/form_builder.rb	/^  class FormBuilder < ActionView::Helpers::FormBuilder$/;"	c	class:CarrierWaveDirect
+FormBuilderHelpers	spec/support/form_builder_helpers.rb	/^module FormBuilderHelpers$/;"	m
+FormHelper	lib/carrierwave_direct/action_view_extensions/form_helper.rb	/^    module FormHelper$/;"	m	class:CarrierWaveDirect.ActionViewExtensions
+Gathering	spec/mount_spec.rb	/^  class Gathering$/;"	c
+HelperMethods	lib/carrierwave_direct/validations/active_model.rb	/^      module HelperMethods$/;"	m	class:CarrierWaveDirect.Validations.ActiveModel
+Helpers	lib/carrierwave_direct/test/helpers.rb	/^    module Helpers$/;"	m	class:CarrierWaveDirect.Test
+IsAttachedValidator	lib/carrierwave_direct/validations/active_model.rb	/^      class IsAttachedValidator < ::ActiveModel::EachValidator$/;"	c	class:CarrierWaveDirect.Validations.ActiveModel
+IsUploadedValidator	lib/carrierwave_direct/validations/active_model.rb	/^      class IsUploadedValidator < ::ActiveModel::EachValidator$/;"	c	class:CarrierWaveDirect.Validations.ActiveModel
+ModelHelpers	spec/support/model_helpers.rb	/^module ModelHelpers$/;"	m
+Mount	lib/carrierwave_direct/mount.rb	/^  module Mount$/;"	m	class:CarrierWaveDirect
+MountedClass	spec/support/mounted_class.rb	/^class MountedClass$/;"	c
+OtherParty	spec/orm/indirect_activerecord_spec.rb	/^  class OtherParty < ActiveRecord::Base$/;"	c
+OtherTestMigration	spec/orm/indirect_activerecord_spec.rb	/^  class OtherTestMigration < migration_class$/;"	c
+Party	spec/orm/activerecord_spec.rb	/^  class Party < ActiveRecord::Base$/;"	c
+Policies	lib/carrierwave_direct/policies/aws4_hmac_sha256.rb	/^  module Policies$/;"	m	class:CarrierWaveDirect
+Policies	lib/carrierwave_direct/policies/aws_base64_sha1.rb	/^  module Policies$/;"	m	class:CarrierWaveDirect
+Policies	lib/carrierwave_direct/policies/base.rb	/^  module Policies$/;"	m	class:CarrierWaveDirect
+Rails	spec/spec_helper.rb	/^module Rails$/;"	m
+Railtie	lib/carrierwave_direct.rb	/^    class Railtie < Rails::Railtie$/;"	c	class:CarrierWaveDirect
+RemoteNetUrlFormatValidator	lib/carrierwave_direct/validations/active_model.rb	/^      class RemoteNetUrlFormatValidator < ::ActiveModel::EachValidator$/;"	c	class:CarrierWaveDirect.Validations.ActiveModel
+Resource	spec/orm/activerecord_spec.rb	/^  class Resource < ActiveRecord::Base$/;"	c
+StandardUploader	spec/orm/indirect_activerecord_spec.rb	/^  class StandardUploader < CarrierWave::Uploader::Base$/;"	c
+Test	lib/carrierwave_direct.rb	/^  module Test$/;"	m	class:CarrierWaveDirect
+Test	lib/carrierwave_direct/test/capybara_helpers.rb	/^  module Test$/;"	m	class:CarrierWaveDirect
+Test	lib/carrierwave_direct/test/helpers.rb	/^  module Test$/;"	m	class:CarrierWaveDirect
+TestMigration	spec/orm/activerecord_spec.rb	/^  class TestMigration < migration_class$/;"	c
+UniqueFilenameValidator	lib/carrierwave_direct/validations/active_model.rb	/^      class UniqueFilenameValidator < ::ActiveModel::EachValidator$/;"	c	class:CarrierWaveDirect.Validations.ActiveModel
+Uploader	lib/carrierwave_direct.rb	/^  module Uploader$/;"	m	class:CarrierWaveDirect
+Uploader	lib/carrierwave_direct/uploader.rb	/^  module Uploader$/;"	m	class:CarrierWaveDirect
+Uploader	lib/carrierwave_direct/uploader/configuration.rb	/^  module Uploader$/;"	m	class:CarrierWaveDirect
+Uploader	lib/carrierwave_direct/uploader/content_type.rb	/^  module Uploader$/;"	m	class:CarrierWaveDirect
+UploaderHelpers	spec/support/uploader_helpers.rb	/^module UploaderHelpers$/;"	m
+Validations	lib/carrierwave_direct/validations/active_model.rb	/^  module Validations$/;"	m	class:CarrierWaveDirect
+ViewHelpers	spec/support/view_helpers.rb	/^module ViewHelpers$/;"	m
+acl	lib/carrierwave_direct/uploader.rb	/^    def acl$/;"	f	class:CarrierWaveDirect.Uploader
+algorithm	lib/carrierwave_direct/policies/aws4_hmac_sha256.rb	/^      def algorithm$/;"	f	class:CarrierWaveDirect.Policies.Aws4HmacSha256
+algorithm	lib/carrierwave_direct/uploader.rb	/^    def algorithm$/;"	f	class:CarrierWaveDirect.Uploader
+attach_file_for_direct_upload	lib/carrierwave_direct/test/capybara_helpers.rb	/^      def attach_file_for_direct_upload(path)$/;"	f	class:CarrierWaveDirect.Test.CapybaraHelpers
+clear!	lib/carrierwave_direct/policies/aws4_hmac_sha256.rb	/^      def clear!$/;"	f	class:CarrierWaveDirect.Policies.Aws4HmacSha256
+clear!	lib/carrierwave_direct/policies/base.rb	/^      def clear!$/;"	f	class:CarrierWaveDirect.Policies.Base
+clear_policy!	lib/carrierwave_direct/uploader.rb	/^    def clear_policy!$/;"	f	class:CarrierWaveDirect.Uploader
+conditions	spec/policies/aws4_hmac_sha256_spec.rb	/^      def conditions(options = {})$/;"	f
+conditions	spec/policies/aws_base64_sha1_spec.rb	/^      def conditions(options = {})$/;"	f
+conditions	spec/uploader_spec.rb	/^      def conditions(options = {})$/;"	f
+content_choices_options	lib/carrierwave_direct/form_builder.rb	/^    def content_choices_options(choices, selected = nil)$/;"	f	class:CarrierWaveDirect.FormBuilder
+content_type	lib/carrierwave_direct/uploader/content_type.rb	/^      def content_type$/;"	f	class:CarrierWaveDirect.Uploader.ContentType
+content_type_field	lib/carrierwave_direct/form_builder.rb	/^    def content_type_field(options)$/;"	f	class:CarrierWaveDirect.FormBuilder
+content_type_label	lib/carrierwave_direct/form_builder.rb	/^    def content_type_label(content=nil)$/;"	f	class:CarrierWaveDirect.FormBuilder
+content_type_select	lib/carrierwave_direct/form_builder.rb	/^    def content_type_select(choices = [], selected = nil, options = {})$/;"	f	class:CarrierWaveDirect.FormBuilder
+content_types	lib/carrierwave_direct/uploader/content_type.rb	/^      def content_types$/;"	f	class:CarrierWaveDirect.Uploader.ContentType
+credential	lib/carrierwave_direct/policies/aws4_hmac_sha256.rb	/^      def credential$/;"	f	class:CarrierWaveDirect.Policies.Aws4HmacSha256
+credential	lib/carrierwave_direct/uploader.rb	/^    def credential$/;"	f	class:CarrierWaveDirect.Uploader
+date	lib/carrierwave_direct/policies/aws4_hmac_sha256.rb	/^      def date$/;"	f	class:CarrierWaveDirect.Policies.Aws4HmacSha256
+date	lib/carrierwave_direct/uploader.rb	/^    def date$/;"	f	class:CarrierWaveDirect.Uploader
+decoded_policy	spec/policies/aws4_hmac_sha256_spec.rb	/^    def decoded_policy(options = {}, &block)$/;"	f
+decoded_policy	spec/policies/aws_base64_sha1_spec.rb	/^    def decoded_policy(options = {}, &block)$/;"	f
+decoded_policy	spec/uploader_spec.rb	/^    def decoded_policy(options = {}, &block)$/;"	f
+direct_fog_hash	lib/carrierwave_direct/policies/aws4_hmac_sha256.rb	/^      def direct_fog_hash(policy_options = {})$/;"	f	class:CarrierWaveDirect.Policies.Aws4HmacSha256
+direct_fog_hash	lib/carrierwave_direct/policies/aws_base64_sha1.rb	/^      def direct_fog_hash(policy_options = {})$/;"	f	class:CarrierWaveDirect.Policies.AwsBase64Sha1
+direct_fog_hash	lib/carrierwave_direct/uploader.rb	/^    def direct_fog_hash(policy_options = {})$/;"	f	class:CarrierWaveDirect.Uploader
+direct_fog_url	lib/carrierwave_direct/uploader.rb	/^    def direct_fog_url$/;"	f	class:CarrierWaveDirect.Uploader
+direct_upload_form_for	lib/carrierwave_direct/action_view_extensions/form_helper.rb	/^      def direct_upload_form_for(record, *args, &block)$/;"	f	class:CarrierWaveDirect.ActionViewExtensions.FormHelper
+direct_uploader	spec/support/form_builder_helpers.rb	/^  def direct_uploader$/;"	f	class:FormBuilderHelpers
+down	spec/orm/activerecord_spec.rb	/^    def self.down$/;"	F	class:TestMigration
+down	spec/orm/indirect_activerecord_spec.rb	/^    def self.down$/;"	F	class:OtherTestMigration
+env	spec/spec_helper.rb	/^  def self.env$/;"	F	class:Rails
+expiration	spec/policies/aws4_hmac_sha256_spec.rb	/^      def expiration(options = {})$/;"	f
+expiration	spec/policies/aws_base64_sha1_spec.rb	/^      def expiration(options = {})$/;"	f
+expiration	spec/uploader_spec.rb	/^      def expiration(options = {})$/;"	f
+extension_regexp	lib/carrierwave_direct/uploader.rb	/^    def extension_regexp$/;"	f	class:CarrierWaveDirect.Uploader
+fields_except_file_field	lib/carrierwave_direct/form_builder.rb	/^    def fields_except_file_field(options = {})$/;"	f	class:CarrierWaveDirect.FormBuilder
+file_field	lib/carrierwave_direct/form_builder.rb	/^    def file_field(method, options = {})$/;"	f	class:CarrierWaveDirect.FormBuilder
+filename	lib/carrierwave_direct/uploader.rb	/^    def filename$/;"	f	class:CarrierWaveDirect.Uploader
+filename_valid?	lib/carrierwave_direct/orm/activerecord.rb	/^        def filename_valid?$/;"	f	class:CarrierWaveDirect.ActiveRecord.mount_uploader
+find_element_value	spec/test/capybara_helpers_spec.rb	/^  def find_element_value(css, value, options = nil)$/;"	f
+find_key	lib/carrierwave_direct/test/capybara_helpers.rb	/^      def find_key$/;"	f	class:CarrierWaveDirect.Test.CapybaraHelpers
+find_upload_path	lib/carrierwave_direct/test/capybara_helpers.rb	/^      def find_upload_path$/;"	f	class:CarrierWaveDirect.Test.CapybaraHelpers
+form	spec/support/form_builder_helpers.rb	/^  def form(options = {}, &block)$/;"	f	class:FormBuilderHelpers
+form_with_default_file_field	spec/form_builder_spec.rb	/^    def form_with_default_file_field$/;"	f
+form_with_file_field_and_no_redirect	spec/form_builder_spec.rb	/^    def form_with_file_field_and_no_redirect$/;"	f
+full_filename	lib/carrierwave_direct/uploader.rb	/^    def full_filename(for_file)$/;"	f	class:CarrierWaveDirect.Uploader
+generate	lib/carrierwave_direct/policies/aws4_hmac_sha256.rb	/^      def generate(options, &block)$/;"	f	class:CarrierWaveDirect.Policies.Aws4HmacSha256
+generate	lib/carrierwave_direct/policies/aws_base64_sha1.rb	/^      def generate(options, &block)$/;"	f	class:CarrierWaveDirect.Policies.AwsBase64Sha1
+has_	lib/carrierwave_direct/mount.rb	/^        def has_#{column}_upload?$/;"	f	class:CarrierWaveDirect
+has_key?	lib/carrierwave_direct/uploader.rb	/^    def has_key?$/;"	f	class:CarrierWaveDirect.Uploader
+has_remote_	lib/carrierwave_direct/mount.rb	/^        def has_remote_#{column}_net_url?$/;"	f	class:CarrierWaveDirect
+have_condition	spec/policies/aws4_hmac_sha256_spec.rb	/^      def have_condition(field, value = nil)$/;"	f
+have_condition	spec/policies/aws_base64_sha1_spec.rb	/^      def have_condition(field, value = nil)$/;"	f
+have_condition	spec/uploader_spec.rb	/^      def have_condition(field, value = nil)$/;"	f
+have_content_length_range	spec/policies/aws4_hmac_sha256_spec.rb	/^          def have_content_length_range(options = {})$/;"	f
+have_content_length_range	spec/policies/aws_base64_sha1_spec.rb	/^          def have_content_length_range(options = {})$/;"	f
+have_content_length_range	spec/uploader_spec.rb	/^          def have_content_length_range(options = {})$/;"	f
+have_content_type	spec/support/view_helpers.rb	/^  def have_content_type(content_type,selected=nil)$/;"	f	class:ViewHelpers
+have_expiration	spec/policies/aws4_hmac_sha256_spec.rb	/^      def have_expiration(expires_in = DirectUploader.upload_expiration)$/;"	f
+have_expiration	spec/policies/aws_base64_sha1_spec.rb	/^      def have_expiration(expires_in = DirectUploader.upload_expiration)$/;"	f
+have_expiration	spec/uploader_spec.rb	/^      def have_expiration(expires_in = DirectUploader.upload_expiration)$/;"	f
+have_input	spec/support/view_helpers.rb	/^  def have_input(resource_name, input, options = {})$/;"	f	class:ViewHelpers
+have_parent_selector	spec/support/view_helpers.rb	/^  def have_parent_selector(options = {})$/;"	f	class:ViewHelpers
+hidden_fields	lib/carrierwave_direct/form_builder.rb	/^    def hidden_fields(options)$/;"	f	class:CarrierWaveDirect.FormBuilder
+included	spec/support/form_builder_helpers.rb	/^  def self.included(base)$/;"	F	class:FormBuilderHelpers
+included	spec/support/model_helpers.rb	/^  def self.included(base)$/;"	F	class:ModelHelpers
+initialize	lib/carrierwave_direct/policies/base.rb	/^      def initialize(uploader)$/;"	f	class:CarrierWaveDirect.Policies.Base
+it_should_be_accessible	spec/support/model_helpers.rb	/^    def it_should_be_accessible(name, sample_data, options = {})$/;"	f	class:ModelHelpers.ClassMethods
+it_should_delegate	spec/support/model_helpers.rb	/^    def it_should_delegate(name, options = {})$/;"	f
+it_should_have_accessor	spec/support/model_helpers.rb	/^    def it_should_have_accessor(name, options = {})$/;"	f
+key	lib/carrierwave_direct/uploader.rb	/^    def key$/;"	f	class:CarrierWaveDirect.Uploader
+key=	lib/carrierwave_direct/uploader.rb	/^    def key=(k)$/;"	f	class:CarrierWaveDirect.Uploader
+key_from_file	lib/carrierwave_direct/uploader.rb	/^    def key_from_file(filename)$/;"	f	class:CarrierWaveDirect.Uploader
+key_regexp	lib/carrierwave_direct/uploader.rb	/^    def key_regexp$/;"	f	class:CarrierWaveDirect.Uploader
+mount_uploader	lib/carrierwave_direct/mount.rb	/^    def mount_uploader(column, uploader=nil, options={}, &block)$/;"	f	class:CarrierWaveDirect.Mount
+mount_uploader	lib/carrierwave_direct/orm/activerecord.rb	/^    def mount_uploader(column, uploader=nil, options={}, &block)$/;"	f	class:CarrierWaveDirect.ActiveRecord
+mount_uploader	spec/orm/activerecord_spec.rb	/^    def mount_uploader$/;"	f
+parent_selector	spec/support/view_helpers.rb	/^  def parent_selector$/;"	f	class:ViewHelpers
+parent_selector_xpath	spec/support/view_helpers.rb	/^  def parent_selector_xpath$/;"	f	class:ViewHelpers
+persisted?	lib/carrierwave_direct/uploader.rb	/^    def persisted?$/;"	f	class:CarrierWaveDirect.Uploader
+policy	lib/carrierwave_direct/policies/base.rb	/^      def policy(options = {}, &block)$/;"	f	class:CarrierWaveDirect.Policies.Base
+policy	lib/carrierwave_direct/uploader.rb	/^    def policy(options = {}, &block)$/;"	f	class:CarrierWaveDirect.Uploader
+protect_against_forgery?	spec/support/form_builder_helpers.rb	/^  def protect_against_forgery?$/;"	f	class:FormBuilderHelpers
+region	lib/carrierwave_direct/uploader.rb	/^    def region$/;"	f	class:CarrierWaveDirect.Uploader
+required_base_fields	lib/carrierwave_direct/form_builder.rb	/^    def required_base_fields$/;"	f	class:CarrierWaveDirect.FormBuilder
+reset_direct_config	lib/carrierwave_direct/uploader/configuration.rb	/^        def reset_direct_config$/;"	f	class:CarrierWaveDirect.Uploader.Configuration.ClassMethods
+sample	spec/support/global_helpers.rb	/^def sample(data)$/;"	f
+sample_key	lib/carrierwave_direct/test/helpers.rb	/^      def sample_key(uploader, options = {})$/;"	f	class:CarrierWaveDirect.Test.Helpers
+sample_key	spec/support/uploader_helpers.rb	/^  def sample_key(options = {})$/;"	f	class:UploaderHelpers
+signature	lib/carrierwave_direct/policies/aws4_hmac_sha256.rb	/^      def signature$/;"	f	class:CarrierWaveDirect.Policies.Aws4HmacSha256
+signature	lib/carrierwave_direct/policies/aws_base64_sha1.rb	/^      def signature$/;"	f	class:CarrierWaveDirect.Policies.AwsBase64Sha1
+signature	lib/carrierwave_direct/uploader.rb	/^    def signature$/;"	f	class:CarrierWaveDirect.Uploader
+signing_key	lib/carrierwave_direct/policies/aws4_hmac_sha256.rb	/^      def signing_key(options = {})$/;"	f	class:CarrierWaveDirect.Policies.Aws4HmacSha256
+signing_policy	lib/carrierwave_direct/uploader.rb	/^    def signing_policy$/;"	f	class:CarrierWaveDirect.Uploader
+signing_policy_class	lib/carrierwave_direct/uploader.rb	/^    def signing_policy_class$/;"	f	class:CarrierWaveDirect.Uploader
+signing_policy_class=	lib/carrierwave_direct/uploader.rb	/^    def signing_policy_class=(signing_policy_class)$/;"	f	class:CarrierWaveDirect.Uploader
+stub_common	spec/test/capybara_helpers_spec.rb	/^    def stub_common$/;"	f
+stub_page	spec/test/capybara_helpers_spec.rb	/^  def stub_page$/;"	f
+submit_to	spec/support/view_helpers.rb	/^  def submit_to(options = {})$/;"	f	class:ViewHelpers
+success_action_field	lib/carrierwave_direct/form_builder.rb	/^    def success_action_field(options)$/;"	f	class:CarrierWaveDirect.FormBuilder
+timestamp	lib/carrierwave_direct/policies/aws4_hmac_sha256.rb	/^      def timestamp$/;"	f	class:CarrierWaveDirect.Policies.Aws4HmacSha256
+to_xpath_attributes	spec/support/view_helpers.rb	/^  def to_xpath_attributes(options = {})$/;"	f	class:ViewHelpers
+up	spec/orm/activerecord_spec.rb	/^    def self.up$/;"	F	class:TestMigration
+up	spec/orm/indirect_activerecord_spec.rb	/^    def self.up$/;"	F	class:OtherTestMigration
+update_version_keys	lib/carrierwave_direct/uploader.rb	/^    def update_version_keys(options)$/;"	f	class:CarrierWaveDirect.Uploader
+upload_directly	lib/carrierwave_direct/test/capybara_helpers.rb	/^      def upload_directly(uploader, button_locator, options = {})$/;"	f	class:CarrierWaveDirect.Test.CapybaraHelpers
+upload_directly	spec/test/capybara_helpers_spec.rb	/^    def upload_directly(options = {})$/;"	f
+url_scheme_white_list	lib/carrierwave_direct/uploader.rb	/^    def url_scheme_white_list$/;"	f	class:CarrierWaveDirect.Uploader
+validate_each	lib/carrierwave_direct/validations/active_model.rb	/^        def validate_each(record, attribute, value)$/;"	f	class:CarrierWaveDirect.Validations.ActiveModel.FilenameFormatValidator
+validate_each	lib/carrierwave_direct/validations/active_model.rb	/^        def validate_each(record, attribute, value)$/;"	f	class:CarrierWaveDirect.Validations.ActiveModel.IsAttachedValidator
+validate_each	lib/carrierwave_direct/validations/active_model.rb	/^        def validate_each(record, attribute, value)$/;"	f	class:CarrierWaveDirect.Validations.ActiveModel.IsUploadedValidator
+validate_each	lib/carrierwave_direct/validations/active_model.rb	/^        def validate_each(record, attribute, value)$/;"	f	class:CarrierWaveDirect.Validations.ActiveModel.RemoteNetUrlFormatValidator
+validate_each	lib/carrierwave_direct/validations/active_model.rb	/^        def validate_each(record, attribute, value)$/;"	f	class:CarrierWaveDirect.Validations.ActiveModel.UniqueFilenameValidator
+validates_filename_format_of	lib/carrierwave_direct/validations/active_model.rb	/^        def validates_filename_format_of(*attr_names)$/;"	f	class:CarrierWaveDirect.Validations.ActiveModel.HelperMethods
+validates_filename_uniqueness_of	lib/carrierwave_direct/validations/active_model.rb	/^        def validates_filename_uniqueness_of(*attr_names)$/;"	f	class:CarrierWaveDirect.Validations.ActiveModel.HelperMethods
+validates_is_attached	lib/carrierwave_direct/validations/active_model.rb	/^        def validates_is_attached(*attr_names)$/;"	f	class:CarrierWaveDirect.Validations.ActiveModel.HelperMethods
+validates_is_uploaded	lib/carrierwave_direct/validations/active_model.rb	/^        def validates_is_uploaded(*attr_names)$/;"	f	class:CarrierWaveDirect.Validations.ActiveModel.HelperMethods
+validates_remote_net_url_format_of	lib/carrierwave_direct/validations/active_model.rb	/^        def validates_remote_net_url_format_of(*attr_names)$/;"	f	class:CarrierWaveDirect.Validations.ActiveModel.HelperMethods
