@@ -7,19 +7,19 @@ module CarrierWaveDirect
         Base64.encode64(
           OpenSSL::HMAC.digest(
             OpenSSL::Digest.new('sha1'),
-            uploader.aws_secret_access_key, policy
+            uploader.secret_access_key, policy
           )
         ).gsub("\n", "")
       end
 
-      def direct_fog_hash(policy_options = {})
+      def direct_aws_hash(policy_options = {})
         {
           key:            uploader.key,
-          AWSAccessKeyId: uploader.aws_access_key_id,
+          AWSAccessKeyId: uploader.access_key_id,
           acl:            uploader.acl,
           policy:         policy(policy_options),
           signature:      signature,
-          uri:            uploader.direct_fog_url
+          uri:            uploader.direct_aws_url
         }
       end
 
@@ -31,7 +31,7 @@ module CarrierWaveDirect
         conditions << ["starts-with", "$utf8", ""] if options[:enforce_utf8]
         conditions << ["starts-with", "$key", uploader.key.sub(/#{Regexp.escape(CarrierWaveDirect::Uploader::FILENAME_WILDCARD)}\z/, "")]
         conditions << ["starts-with", "$Content-Type", ""] if uploader.will_include_content_type
-        conditions << {"bucket" => uploader.fog_directory}
+        conditions << {"bucket" => uploader.aws_bucket}
         conditions << {"acl" => uploader.acl}
 
         if uploader.use_action_status

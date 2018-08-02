@@ -10,10 +10,10 @@ describe CarrierWaveDirect::Uploader do
   let(:mounted_model) { MountedClass.new }
   let(:mounted_subject) { DirectUploader.new(mounted_model, sample(:mounted_as)) }
 
-  DirectUploader.fog_credentials.keys.each do |key|
+  DirectUploader.aws_credentials.keys.each do |key|
     describe "##{key}" do
       it "should return the #{key.to_s.capitalize}" do
-        expect(subject.send(key)).to eq subject.class.fog_credentials[key]
+        expect(subject.send(key)).to eq subject.class.aws_credentials[key]
       end
 
       it "should not be nil" do
@@ -103,11 +103,9 @@ describe CarrierWaveDirect::Uploader do
     end
   end
 
-  describe "#direct_fog_url" do
-    it "should return the result from CarrierWave::Storage::Fog::File#public_url" do
-      expect(subject.direct_fog_url).to eq CarrierWave::Storage::Fog::File.new(
-        subject, nil, nil
-      ).public_url
+  describe "#direct_aws_url" do
+    it "should return the standard bucket name" do
+      expect(subject.direct_aws_url).to eq "https://#{subject.aws_bucket}.s3.amazonaws.com/"
     end
   end
 
@@ -277,7 +275,7 @@ describe CarrierWaveDirect::Uploader do
 
   describe "#acl" do
     it "should return the correct s3 access policy" do
-      expect(subject.acl).to eq (subject.fog_public ? 'public-read' : 'private')
+      expect(subject.acl).to eq 'public-read'
     end
   end
 
@@ -392,7 +390,7 @@ describe CarrierWaveDirect::Uploader do
         end
 
         it "'bucket'" do
-          expect(conditions).to have_condition("bucket" => subject.fog_directory)
+          expect(conditions).to have_condition("bucket" => subject.aws_bucket)
         end
 
         it "'acl'" do

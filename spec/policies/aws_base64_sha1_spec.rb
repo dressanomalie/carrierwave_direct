@@ -8,12 +8,12 @@ describe CarrierWaveDirect::Policies::AwsBase64Sha1 do
   let(:mounted_model) { MountedClass.new }
   let(:mounted_subject) { DirectUploader.new(mounted_model, sample(:mounted_as)) }
 
-  describe "#direct_fog_hash" do
+  describe "#direct_aws_hash" do
     it "should return the policy hash" do
-      expect(subject.direct_fog_hash.keys).to eq([:key, :AWSAccessKeyId, :acl, :policy, :signature, :uri])
-      expect(subject.direct_fog_hash[:acl]).to eq 'public-read'
-      expect(subject.direct_fog_hash[:key]).to match /\$\{filename\}/
-      expect(subject.direct_fog_hash[:uri]).to eq "https://s3.amazonaws.com/AWS_FOG_DIRECTORY/"
+      expect(subject.direct_aws_hash.keys).to eq([:key, :AWSAccessKeyId, :acl, :policy, :signature, :uri])
+      expect(subject.direct_aws_hash[:acl]).to eq 'public-read'
+      expect(subject.direct_aws_hash[:key]).to match /\$\{filename\}/
+      expect(subject.direct_aws_hash[:uri]).to eq "https://S3_BUCKET_NAME.s3.amazonaws.com/"
     end
   end
 
@@ -124,11 +124,11 @@ describe CarrierWaveDirect::Policies::AwsBase64Sha1 do
         end
 
         it "'bucket'" do
-          expect(conditions).to have_condition("bucket" => uploader.fog_directory)
+          expect(conditions).to have_condition("bucket" => uploader.aws_bucket)
         end
 
         it "'acl'" do
-          expect(conditions).to have_condition("acl" => uploader.acl)
+          expect(conditions).to have_condition("acl" => uploader.aws_acl)
         end
 
         it "'success_action_redirect'" do
@@ -221,7 +221,7 @@ describe CarrierWaveDirect::Policies::AwsBase64Sha1 do
     it "should return a base64 encoded 'sha1' hash of the secret key and policy document" do
       expect(Base64.decode64(subject.signature)).to eq OpenSSL::HMAC.digest(
         OpenSSL::Digest.new('sha1'),
-        uploader.aws_secret_access_key, subject.policy
+        uploader.secret_access_key, subject.policy
       )
     end
   end

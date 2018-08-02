@@ -34,19 +34,18 @@ Note that CarrierWaveDirect is not compatible with Rails 2.
 
 Please read the [CarrierWave readme](https://github.com/jnicklas/carrierwave) first
 
-CarrierWaveDirect works with [fog](https://github.com/fog/fog) so make sure you have [CarrierWave](https://github.com/jnicklas/carrierwave) set up and initialized with your fog credentials, for example:
+This version of CarrierWaveDirect works with [carrierwave-aws](https://github.com/sorentwo/carrierwave-aws) so make sure you have [CarrierWave](https://github.com/jnicklas/carrierwave) set up and initialized with your aws credentials, for example:
 
 ```ruby
 CarrierWave.configure do |config|
-  config.fog_credentials = {
-    :provider               => 'AWS',       # required
-    :aws_access_key_id      => 'xxx',       # required
-    :aws_secret_access_key  => 'yyy',       # required
-    :region                 => 'eu-west-1'  # optional, defaults to 'us-east-1'
+  config.aws_credentials = {
+    access_key_id:     'AWS_ACCESS_KEY_ID',
+    secret_access_key: 'AWS_SECRET_ACCESS_KEY'),
+    region:            'AWS_REGION' # Require
   }
-  config.fog_directory  = 'name_of_your_aws_bucket' # required
-  # see https://github.com/jnicklas/carrierwave#using-amazon-s3
-  # for more optional configuration
+  config.storage    = :aws
+  config.aws_bucket = 'S3_BUCKET_NAME'
+  config.aws_acl    = 'public-read'
 end
 ```
 
@@ -91,12 +90,12 @@ Here is an example using Sinatra and Haml
 # uploader_test.rb
 
 CarrierWave.configure do |config|
-  config.fog_credentials = {
-    :provider               => 'AWS',
-    :aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'],
-    :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY']
+  config.aws_credentials = {
+    :access_key_id      => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY'],
+    :region:            => ENV['AWS_REGION'],
   }
-  config.fog_directory  = ENV['AWS_FOG_DIRECTORY'] # bucket name
+  config.aws_bucket  = ENV['S3_BUCKET_NAME'] # bucket name
 end
 
 class ImageUploader < CarrierWave::Uploader::Base
@@ -116,10 +115,10 @@ end
 # Now using AWS POST authentication V4
 # See http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-authentication-HTTPPOST.html for more information
 
-%form{:action => @uploader.direct_fog_url, :method => "post", :enctype => "multipart/form-data"}
+%form{:action => @uploader.direct_aws_url, :method => "post", :enctype => "multipart/form-data"}
   %input{:name => "utf8", :type => "hidden"}
   %input{:type => "hidden", :name => "key", :value => @uploader.key}
-  %input{:type => "hidden", :name => "acl", :value => @uploader.acl}
+  %input{:type => "hidden", :name => "acl", :value => @uploader.aws_acl}
   %input{:type => "hidden", :name => "success_action_redirect", :value => @uploader.success_action_redirect}
   %input{:type => "hidden", :name => "policy", :value => @uploader.policy}
   %input{:type => "hidden", :name => "x-amz-algorithm", :value => @uploader.algorithm}
@@ -211,7 +210,6 @@ First, tell CarrierWaveDirect what your default content type should be:
 
 ```ruby
 CarrierWave.configure do |config|
-  # ... fog configuration and other options ...
   config.will_include_content_type = true
 
   config.default_content_type = 'video/mpeg'
@@ -276,7 +274,7 @@ Or you can use the helper which shows all possible content types as a select, wi
 
 Processing and saving file uploads are typically long running tasks and should be done in a background process. CarrierWaveDirect gives you a few methods to help you do this with your favorite background processor such as [DelayedJob](https://github.com/collectiveidea/delayed_job) or [Resque](https://github.com/resque/resque).
 
-If your upload was successful then you will be redirected to the `success_action_redirect` url you specified in your uploader. S3 replies with a redirect like this: `http://example.com?bucket=your_fog_directory&key=uploads%2Fguid%2Ffile.ext&etag=%22d41d8cd98f00b204e9800998ecf8427%22`
+If your upload was successful then you will be redirected to the `success_action_redirect` url you specified in your uploader. S3 replies with a redirect like this: `http://example.com?bucket=your_s3_directory&key=uploads%2Fguid%2Ffile.ext&etag=%22d41d8cd98f00b204e9800998ecf8427%22`
 
 The `key` is the most important piece of information as we can use it for validating the file extension, downloading the file from S3, processing it and re-uploading it.
 
@@ -456,25 +454,6 @@ When you use this gem in conjunction with CloudFront you'll need an additional s
 
 To solve this issue you must enable POST requests in your CloudFront distribution settings. Here is a [step by step walkthrough](http://blog.celingest.com/en/2014/10/02/tutorial-using-cors-with-cloudfront-and-s3/) that explain this setup. It also explain CORS configuration.
 
-## Testing with CarrierWaveDirect
-
-CarrierWaveDirect provides a couple of helpers to help with integration and unit testing. You don't want to contact the Internet during your tests as this is slow, expensive and unreliable. You should first put fog into mock mode by doing something like this.
-
-```ruby
-Fog.mock!
-
-def fog_directory
-  ENV['AWS_FOG_DIRECTORY']
-end
-
-connection = ::Fog::Storage.new(
-  :aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'],
-  :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY'],
-  :provider               => 'AWS'
-)
-
-connection.directories.create(:key => fog_directory)
-```
 
 ### Using Capybara
 

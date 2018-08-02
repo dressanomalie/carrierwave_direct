@@ -8,13 +8,13 @@ describe CarrierWaveDirect::Policies::Aws4HmacSha256 do
   let(:mounted_model) { MountedClass.new }
   let(:mounted_subject) { DirectUploader.new(mounted_model, sample(:mounted_as)) }
 
-  describe "#direct_fog_hash" do
+  describe "#direct_aws_hash" do
     it "should return the policy hash" do
-      expect(subject.direct_fog_hash.keys).to eq([:key, :acl, :policy, :"X-Amz-Signature", :"X-Amz-Credential", :"X-Amz-Algorithm", :"X-Amz-Date", :uri])
-      expect(subject.direct_fog_hash[:acl]).to eq 'public-read'
-      expect(subject.direct_fog_hash[:key]).to match /\$\{filename\}/
-      expect(subject.direct_fog_hash[:"X-Amz-Algorithm"]).to eq "AWS4-HMAC-SHA256"
-      expect(subject.direct_fog_hash[:uri]).to eq "https://s3.amazonaws.com/AWS_FOG_DIRECTORY/"
+      expect(subject.direct_aws_hash.keys).to eq([:key, :acl, :policy, :"X-Amz-Signature", :"X-Amz-Credential", :"X-Amz-Algorithm", :"X-Amz-Date", :uri])
+      expect(subject.direct_aws_hash[:acl]).to eq 'public-read'
+      expect(subject.direct_aws_hash[:key]).to match /\$\{filename\}/
+      expect(subject.direct_aws_hash[:"X-Amz-Algorithm"]).to eq "AWS4-HMAC-SHA256"
+      expect(subject.direct_aws_hash[:uri]).to eq "https://S3_BUCKET_NAME.s3.amazonaws.com/"
     end
   end
 
@@ -127,11 +127,11 @@ describe CarrierWaveDirect::Policies::Aws4HmacSha256 do
         end
 
         it "'bucket'" do
-          expect(conditions).to have_condition("bucket" => uploader.fog_directory)
+          expect(conditions).to have_condition("bucket" => uploader.aws_bucket)
         end
 
         it "'acl'" do
-          expect(conditions).to have_condition("acl" => uploader.acl)
+          expect(conditions).to have_condition("acl" => uploader.aws_acl)
         end
 
         it "'success_action_redirect'" do
@@ -231,7 +231,7 @@ describe CarrierWaveDirect::Policies::Aws4HmacSha256 do
   #http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-UsingHTTPPOST.html
   describe "#signature_key" do
     it "should include correct signature_key elements" do
-      kDate    = OpenSSL::HMAC.digest('sha256', "AWS4" + uploader.aws_secret_access_key, Time.now.utc.strftime("%Y%m%d"))
+      kDate    = OpenSSL::HMAC.digest('sha256', "AWS4" + uploader.secret_access_key, Time.now.utc.strftime("%Y%m%d"))
       kRegion  = OpenSSL::HMAC.digest('sha256', kDate, uploader.region)
       kService = OpenSSL::HMAC.digest('sha256', kRegion, 's3')
       kSigning = OpenSSL::HMAC.digest('sha256', kService, "aws4_request")
