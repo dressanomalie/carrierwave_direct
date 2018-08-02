@@ -17,7 +17,7 @@ module CarrierWaveDirect
       attr_accessor :success_action_redirect
       attr_accessor :success_action_status
 
-      (aws_credentials || []).keys.each do |key|
+      aws_credentials.keys.each do |key|
         define_method(key) do
           aws_credentials[key]
         end
