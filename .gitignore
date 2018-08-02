@@ -7,3 +7,4 @@ pkg/*
 /.idea/
 vendor/ruby
 .ruby-version
+.tags
