@@ -9,4 +9,3 @@ CarrierWave.configure do |config|
   }
   config.fog_directory = 'AWS_FOG_DIRECTORY' # bucket name
 end
-

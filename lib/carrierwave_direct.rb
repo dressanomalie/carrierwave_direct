@@ -40,4 +40,3 @@ end
 require "carrierwave_direct/mount"
 require "carrierwave_direct/uploader"
 require "carrierwave_direct/version"
-

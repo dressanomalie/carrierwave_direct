@@ -226,4 +226,3 @@ describe CarrierWaveDirect::Policies::AwsBase64Sha1 do
     end
   end
 end
-

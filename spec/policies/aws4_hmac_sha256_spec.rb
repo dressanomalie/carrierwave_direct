@@ -240,4 +240,3 @@ describe CarrierWaveDirect::Policies::Aws4HmacSha256 do
     end
   end
 end
-

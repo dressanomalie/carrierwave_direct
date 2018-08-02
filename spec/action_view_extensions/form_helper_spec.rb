@@ -31,4 +31,3 @@ describe CarrierWaveDirect::ActionViewExtensions::FormHelper do
     end
   end
 end
-

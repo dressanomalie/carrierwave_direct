@@ -40,8 +40,8 @@ Bug Fixes:
   * `["starts-with", "$utf8", ""]` is not needed as condition (Rocco Galluzzo @byterussian)
 
 Misc:
-  * Dropped support for ruby 1.9, it has [reached its end of life](https://www.ruby-lang.org/en/news/2014/01/10/ruby-1-9-3-will-end-on-2015/) 
-  * Add 2.2.0 support to travis. 
+  * Dropped support for ruby 1.9, it has [reached its end of life](https://www.ruby-lang.org/en/news/2014/01/10/ruby-1-9-3-will-end-on-2015/)
+  * Add 2.2.0 support to travis.
   * Compatible with Capybara 2.7
   * Replaced fog dependency with fog-aws; significantly reduces gem footprint
 
